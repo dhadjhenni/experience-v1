@@ -12,8 +12,8 @@ module.exports = function (grunt) {
 
   // Project configuration.
 	grunt.initConfig({
-	
-	
+
+
 		// LESS
 		less: {
 			dist: {
@@ -60,13 +60,13 @@ module.exports = function (grunt) {
     copy: {
       audiojs: {
         expand: true,
-        cwd: 'js/plugins/', 
+        cwd: 'js/plugins/',
         src: ['*.swf','*.gif'],
         dest: templatesDir +'js/'
       },
       vendorjs: {
         expand: true,
-        cwd: 'js/', 
+        cwd: 'js/',
         src: ['vendor/*'],
         dest: templatesDir +'js/'
       },
@@ -77,16 +77,16 @@ module.exports = function (grunt) {
         dest: templatesDir +'js/',
         rename: function(dest, src) {
           return dest + src.replace(/\.js$/, ".min.js");
-        } 
+        }
       }
     },
-		
-		
+
+
 		// WATCH
 		watch: {
 			styles: {
-				files: 'less/**/*.less', 
-				tasks: ['less:dist'], 
+				files: 'less/**/*.less',
+				tasks: ['less:dist'],
 				// options: {
 				// 	livereload: true,
 				// }
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
       }
 		}
 
-		
+
 	})
 
 	// Import du package
@@ -106,6 +106,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-svgicons2svgfont');
 
 	// INIT
   grunt.registerTask('default', ['watch']);

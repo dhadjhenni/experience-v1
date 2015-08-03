@@ -4,7 +4,7 @@
   "repository": "https://github.com/dhadjhenni/experience-v1",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "0.4.0",
+    "grunt": "0.4.5",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-less": "~0.11.2",
     "grunt-recess": "~0.6.1",
